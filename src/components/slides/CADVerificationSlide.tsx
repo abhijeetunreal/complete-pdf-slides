@@ -18,7 +18,7 @@ export const CADVerificationSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={16} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={17} totalSlides={totalSlides}>
       <SectionBadge step="9" label="CAD Verification" />
       
       <motion.h2

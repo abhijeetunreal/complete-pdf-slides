@@ -10,7 +10,7 @@ interface Props {
 
 export const ElectricalSchematicSlide = ({ totalSlides }: Props) => {
   return (
-    <SlideLayout slideNumber={15} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={16} totalSlides={totalSlides}>
       <SectionBadge step="9" label="Detailed System Architecture" />
       
       <motion.h2

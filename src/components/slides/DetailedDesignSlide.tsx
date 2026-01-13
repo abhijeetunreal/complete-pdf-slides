@@ -20,7 +20,7 @@ export const DetailedDesignSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={18} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={19} totalSlides={totalSlides}>
       <SectionBadge label="Detailed Design of Chosen Concept" />
       
       <motion.h2

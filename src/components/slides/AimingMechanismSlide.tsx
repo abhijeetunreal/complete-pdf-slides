@@ -26,7 +26,7 @@ export const AimingMechanismSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={13} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={14} totalSlides={totalSlides}>
       <SectionBadge step="7" label="Detailed Embodiment (Continued)" />
       
       <motion.h2

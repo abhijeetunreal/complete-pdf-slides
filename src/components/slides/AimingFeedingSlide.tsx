@@ -5,6 +5,7 @@ import { BulletList } from "../presentation/BulletList";
 import { ImagePlaceholder } from "../presentation/ImagePlaceholder";
 import { HighlightBox } from "../presentation/HighlightBox";
 import { Move, Crosshair } from "lucide-react";
+import aimingAndFeeding from "../../assets/aimingandfeeding.png";
 
 interface Props {
   totalSlides: number;
@@ -23,7 +24,7 @@ export const AimingFeedingSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={7} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={8} totalSlides={totalSlides}>
       <SectionBadge step="4" label="Preliminary Layouts (Continued)" />
       
       <motion.h2
@@ -40,17 +41,19 @@ export const AimingFeedingSlide = ({ totalSlides }: Props) => {
           <HighlightBox title="4.2 Aiming System: Dual Linear Actuation" icon={<Crosshair className="w-5 h-5" />}>
             <BulletList items={aimingPoints} />
           </HighlightBox>
-        </div>
-
-        <div className="space-y-6">
+          
           <HighlightBox title="4.3 Feeding Mechanism: Solenoid" icon={<Move className="w-5 h-5" />}>
             <BulletList items={feedingPoints} />
           </HighlightBox>
-          
+        </div>
+
+        <div className="space-y-6">
           <ImagePlaceholder 
-            label="Linear Actuator Mechanism"
-            description="100mm stroke linear actuator for pitch/yaw control"
+            label="Aiming and Feeding Mechanism"
+            description="Linear actuator mechanism for pitch/yaw control and solenoid feeding system"
             aspectRatio="video"
+            src={aimingAndFeeding}
+            alt="Aiming and Feeding Mechanism - Linear actuator and solenoid system"
           />
         </div>
       </div>

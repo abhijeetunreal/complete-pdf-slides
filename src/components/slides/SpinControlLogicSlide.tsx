@@ -17,7 +17,7 @@ export const SpinControlLogicSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={19} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={20} totalSlides={totalSlides}>
       <SectionBadge label="Spin Control Logic" />
       
       <motion.h2

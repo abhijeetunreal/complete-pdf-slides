@@ -25,7 +25,7 @@ export const FullBOMContinuedSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={23} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={24} totalSlides={totalSlides}>
       <SectionBadge label="BOM (Continued)" />
       
       <motion.h2

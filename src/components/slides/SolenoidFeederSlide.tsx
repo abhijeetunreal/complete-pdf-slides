@@ -28,7 +28,7 @@ export const SolenoidFeederSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={14} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={15} totalSlides={totalSlides}>
       <SectionBadge step="7-8" label="Feeder & Design-For-X" />
       
       <motion.h2

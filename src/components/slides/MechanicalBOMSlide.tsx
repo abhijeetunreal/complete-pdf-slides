@@ -25,7 +25,7 @@ export const MechanicalBOMSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={11} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={12} totalSlides={totalSlides}>
       <SectionBadge step="6" label="Component Sourcing (Continued)" />
       
       <motion.h2

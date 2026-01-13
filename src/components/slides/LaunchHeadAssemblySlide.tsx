@@ -5,6 +5,7 @@ import { BulletList } from "../presentation/BulletList";
 import { ImagePlaceholder } from "../presentation/ImagePlaceholder";
 import { HighlightBox } from "../presentation/HighlightBox";
 import { Settings } from "lucide-react";
+import headMount from "../../assets/headmount.png";
 
 interface Props {
   totalSlides: number;
@@ -24,7 +25,7 @@ export const LaunchHeadAssemblySlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={12} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={13} totalSlides={totalSlides}>
       <SectionBadge step="7" label="Detailed Embodiment & Assembly" />
       
       <motion.h2
@@ -53,6 +54,8 @@ export const LaunchHeadAssemblySlide = ({ totalSlides }: Props) => {
             label="Quad-Motor Head Assembly"
             description="Two parallel plates with 4 x 775 motors in X-configuration"
             aspectRatio="square"
+            src={headMount}
+            alt="Quad-Motor Head Assembly - Two parallel plates with 4 x 775 motors in X-configuration"
           />
         </div>
       </div>

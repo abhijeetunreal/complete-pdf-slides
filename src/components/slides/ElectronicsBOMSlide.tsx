@@ -28,7 +28,7 @@ export const ElectronicsBOMSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={9} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={10} totalSlides={totalSlides}>
       <SectionBadge step="6" label="Component Sourcing & Budget" />
       
       <motion.h2

@@ -10,7 +10,7 @@ interface Props {
 
 export const ConclusionSlide = ({ totalSlides }: Props) => {
   return (
-    <SlideLayout slideNumber={17} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={18} totalSlides={totalSlides}>
       <SectionBadge label="Conclusion" />
       
       <motion.h2

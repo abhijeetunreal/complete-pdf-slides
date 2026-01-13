@@ -28,7 +28,7 @@ export const AimingFeedingSubsystemSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={20} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={21} totalSlides={totalSlides}>
       <SectionBadge label="Aiming & Feeding Sub-Systems" />
       
       <motion.h2

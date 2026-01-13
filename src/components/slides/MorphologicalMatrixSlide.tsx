@@ -26,7 +26,7 @@ export const MorphologicalMatrixSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={8} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={9} totalSlides={totalSlides}>
       <SectionBadge step="5" label="Morphological Matrix & Concept Selection" />
       
       <motion.h2

@@ -32,7 +32,7 @@ export const AestheticsSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={21} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={22} totalSlides={totalSlides}>
       <SectionBadge label="Aesthetics & Form" />
       
       <motion.h2

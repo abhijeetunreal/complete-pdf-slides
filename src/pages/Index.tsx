@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TitleSlide } from "@/components/slides/TitleSlide";
 import { PrimaryRequirementsSlide } from "@/components/slides/PrimaryRequirementsSlide";
 import { SecondaryRequirementsSlide } from "@/components/slides/SecondaryRequirementsSlide";
 import { SpatialConstraintsSlide } from "@/components/slides/SpatialConstraintsSlide";
 import { FunctionCarriersSlide } from "@/components/slides/FunctionCarriersSlide";
 import { LaunchMechanismSlide } from "@/components/slides/LaunchMechanismSlide";
+import { LaunchMechanismSlide2 } from "@/components/slides/LaunchMechanismSlide2";
 import { AimingFeedingSlide } from "@/components/slides/AimingFeedingSlide";
 import { MorphologicalMatrixSlide } from "@/components/slides/MorphologicalMatrixSlide";
 import { ElectronicsBOMSlide } from "@/components/slides/ElectronicsBOMSlide";
@@ -28,7 +28,7 @@ import { PrototypingSlide } from "@/components/slides/PrototypingSlide";
 import { TimelineSlide } from "@/components/slides/TimelineSlide";
 import { DemoRequirementsSlide } from "@/components/slides/DemoRequirementsSlide";
 
-const TOTAL_SLIDES = 26;
+const TOTAL_SLIDES = 27;
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -58,26 +58,27 @@ const Index = () => {
       case 4: return <SpatialConstraintsSlide {...props} />;
       case 5: return <FunctionCarriersSlide {...props} />;
       case 6: return <LaunchMechanismSlide {...props} />;
-      case 7: return <AimingFeedingSlide {...props} />;
-      case 8: return <MorphologicalMatrixSlide {...props} />;
-      case 9: return <ElectronicsBOMSlide {...props} />;
-      case 10: return <ElectronicComponentsSlide {...props} />;
-      case 11: return <MechanicalBOMSlide {...props} />;
-      case 12: return <LaunchHeadAssemblySlide {...props} />;
-      case 13: return <AimingMechanismSlide {...props} />;
-      case 14: return <SolenoidFeederSlide {...props} />;
-      case 15: return <ElectricalSchematicSlide {...props} />;
-      case 16: return <CADVerificationSlide {...props} />;
-      case 17: return <ConclusionSlide {...props} />;
-      case 18: return <DetailedDesignSlide {...props} />;
-      case 19: return <SpinControlLogicSlide {...props} />;
-      case 20: return <AimingFeedingSubsystemSlide {...props} />;
-      case 21: return <AestheticsSlide {...props} />;
-      case 22: return <FullBOMSlide {...props} />;
-      case 23: return <FullBOMContinuedSlide {...props} />;
-      case 24: return <PrototypingSlide {...props} />;
-      case 25: return <TimelineSlide {...props} />;
-      case 26: return <DemoRequirementsSlide {...props} />;
+      case 7: return <LaunchMechanismSlide2 {...props} />;
+      case 8: return <AimingFeedingSlide {...props} />;
+      case 9: return <MorphologicalMatrixSlide {...props} />;
+      case 10: return <ElectronicsBOMSlide {...props} />;
+      case 11: return <ElectronicComponentsSlide {...props} />;
+      case 12: return <MechanicalBOMSlide {...props} />;
+      case 13: return <LaunchHeadAssemblySlide {...props} />;
+      case 14: return <AimingMechanismSlide {...props} />;
+      case 15: return <SolenoidFeederSlide {...props} />;
+      case 16: return <ElectricalSchematicSlide {...props} />;
+      case 17: return <CADVerificationSlide {...props} />;
+      case 18: return <ConclusionSlide {...props} />;
+      case 19: return <DetailedDesignSlide {...props} />;
+      case 20: return <SpinControlLogicSlide {...props} />;
+      case 21: return <AimingFeedingSubsystemSlide {...props} />;
+      case 22: return <AestheticsSlide {...props} />;
+      case 23: return <FullBOMSlide {...props} />;
+      case 24: return <FullBOMContinuedSlide {...props} />;
+      case 25: return <PrototypingSlide {...props} />;
+      case 26: return <TimelineSlide {...props} />;
+      case 27: return <DemoRequirementsSlide {...props} />;
       default: return <TitleSlide {...props} />;
     }
   };
@@ -85,21 +86,6 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background">
       <AnimatePresence mode="wait">{renderSlide()}</AnimatePresence>
-
-      {/* Navigation */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50">
-        <button onClick={prevSlide} disabled={currentSlide === 1} className="p-3 rounded-full bg-card border border-border hover:bg-muted disabled:opacity-30 transition-all">
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <div className="flex gap-1.5">
-          {Array.from({ length: TOTAL_SLIDES }, (_, i) => (
-            <button key={i} onClick={() => goToSlide(i + 1)} className={`nav-dot ${currentSlide === i + 1 ? "active" : ""}`} />
-          ))}
-        </div>
-        <button onClick={nextSlide} disabled={currentSlide === TOTAL_SLIDES} className="p-3 rounded-full bg-card border border-border hover:bg-muted disabled:opacity-30 transition-all">
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
     </div>
   );
 };

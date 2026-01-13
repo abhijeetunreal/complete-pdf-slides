@@ -4,6 +4,7 @@ import { SectionBadge } from "../presentation/SectionBadge";
 import { BulletList } from "../presentation/BulletList";
 import { ImagePlaceholder } from "../presentation/ImagePlaceholder";
 import { StatCard } from "../presentation/StatCard";
+import fieldDeploymentDiagram from "../../assets/Field Deployment Diagram.png";
 
 interface Props {
   totalSlides: number;
@@ -50,6 +51,8 @@ export const SpatialConstraintsSlide = ({ totalSlides }: Props) => {
             label="Field Deployment Diagram"
             description="Cricket field layout showing slip cordon, point, and cover positions"
             aspectRatio="square"
+            src={fieldDeploymentDiagram}
+            alt="Field Deployment Diagram - Cricket field layout showing slip cordon, point, and cover positions"
           />
         </motion.div>
       </div>

@@ -14,7 +14,7 @@ export const SlideLayout = ({ children, slideNumber, totalSlides }: SlideLayoutP
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="slide-container flex flex-col"
+      className="slide-container flex flex-col h-screen"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -24,12 +24,12 @@ export const SlideLayout = ({ children, slideNumber, totalSlides }: SlideLayoutP
       </div>
 
       {/* Content */}
-      <div className="flex-1 relative z-10 p-6 md:p-10 lg:p-14 overflow-y-auto">
+      <div className="flex-1 relative z-10 p-6 md:p-10 lg:p-14 overflow-y-auto min-h-0">
         {children}
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 px-6 md:px-10 lg:px-14 py-4 flex items-center justify-between border-t border-border/50">
+      <div className="relative z-10 px-6 md:px-10 lg:px-14 py-4 flex items-center justify-between border-t border-border/50 flex-shrink-0">
         <span className="text-sm text-muted-foreground font-medium">
           Cricket Fielding Training Device (CFTD)
         </span>
