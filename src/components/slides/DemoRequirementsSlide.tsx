@@ -18,7 +18,7 @@ export const DemoRequirementsSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={27} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={29} totalSlides={totalSlides}>
       <SectionBadge label="Final Demonstration" />
       <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="slide-title text-3xl md:text-4xl mt-6 mb-6">
         4.2 Requirements for Final Demonstration

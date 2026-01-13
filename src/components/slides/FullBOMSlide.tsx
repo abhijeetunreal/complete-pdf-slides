@@ -31,7 +31,7 @@ export const FullBOMSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={23} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={25} totalSlides={totalSlides}>
       <SectionBadge label="Bill of Materials" />
       
       <motion.h2

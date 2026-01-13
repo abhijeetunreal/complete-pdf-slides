@@ -18,7 +18,7 @@ export const TimelineSlide = ({ totalSlides }: Props) => {
   ];
 
   return (
-    <SlideLayout slideNumber={26} totalSlides={totalSlides}>
+    <SlideLayout slideNumber={28} totalSlides={totalSlides}>
       <SectionBadge label="Procurement & Production Plan" />
       <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="slide-title text-3xl md:text-4xl mt-6 mb-6">
         4.1 Detailed Timeline (4 Weeks)

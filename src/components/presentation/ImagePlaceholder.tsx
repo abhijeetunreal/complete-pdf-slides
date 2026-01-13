@@ -30,13 +30,13 @@ export const ImagePlaceholder = ({
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className={`image-placeholder ${src ? 'w-full max-h-full overflow-hidden' : aspectClasses[aspectRatio]} ${src ? '' : 'flex-col gap-3'} flex items-center justify-center ${className}`}
+      className={`image-placeholder ${src ? 'inline-flex w-fit h-fit max-w-full' : aspectClasses[aspectRatio]} ${src ? '' : 'flex-col gap-3'} flex items-center justify-center ${className}`}
     >
       {src ? (
         <img 
           src={src} 
           alt={alt || label}
-          className="w-full h-auto max-h-[calc(100vh-300px)] object-contain"
+          className="max-w-full max-h-[70vh] w-auto h-auto block rounded-xl"
         />
       ) : (
         <>
