@@ -2,95 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Cricket Training Device Presentation - Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cricket-inspired color palette */
+    --background: 160 25% 6%;
+    --foreground: 60 10% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 160 20% 10%;
+    --card-foreground: 60 10% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 160 20% 10%;
+    --popover-foreground: 60 10% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Cricket green as primary */
+    --primary: 145 60% 40%;
+    --primary-foreground: 60 10% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Amber/Gold accent for sports energy */
+    --secondary: 40 90% 55%;
+    --secondary-foreground: 160 25% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 160 15% 18%;
+    --muted-foreground: 160 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Orange accent for highlights */
+    --accent: 25 95% 55%;
+    --accent-foreground: 160 25% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 10% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 145 60% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom presentation tokens */
+    --slide-bg: 160 25% 6%;
+    --slide-gradient-start: 160 30% 8%;
+    --slide-gradient-end: 160 20% 4%;
+    --table-header: 145 50% 25%;
+    --table-row-alt: 160 20% 12%;
+    --highlight-glow: 145 60% 40%;
+    --badge-success: 145 70% 35%;
+    --badge-warning: 40 90% 50%;
+    --badge-info: 200 80% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 160 25% 8%;
+    --sidebar-foreground: 60 10% 90%;
+    --sidebar-primary: 145 60% 40%;
+    --sidebar-primary-foreground: 60 10% 98%;
+    --sidebar-accent: 160 20% 15%;
+    --sidebar-accent-foreground: 60 10% 95%;
+    --sidebar-border: 160 15% 20%;
+    --sidebar-ring: 145 60% 40%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 160 25% 6%;
+    --foreground: 60 10% 95%;
+    --card: 160 20% 10%;
+    --card-foreground: 60 10% 95%;
+    --popover: 160 20% 10%;
+    --popover-foreground: 60 10% 95%;
+    --primary: 145 60% 40%;
+    --primary-foreground: 60 10% 98%;
+    --secondary: 40 90% 55%;
+    --secondary-foreground: 160 25% 6%;
+    --muted: 160 15% 18%;
+    --muted-foreground: 160 10% 60%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 160 25% 6%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 10% 98%;
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 145 60% 40%;
+    --sidebar-background: 160 25% 8%;
+    --sidebar-foreground: 60 10% 90%;
+    --sidebar-primary: 145 60% 40%;
+    --sidebar-primary-foreground: 60 10% 98%;
+    --sidebar-accent: 160 20% 15%;
+    --sidebar-accent-foreground: 60 10% 95%;
+    --sidebar-border: 160 15% 20%;
+    --sidebar-ring: 145 60% 40%;
   }
 }
 
@@ -100,6 +100,118 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .slide-container {
+    @apply min-h-screen w-full relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(var(--slide-gradient-start)) 0%, hsl(var(--slide-gradient-end)) 100%);
+  }
+
+  .slide-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight;
+    background: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--primary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .slide-subtitle {
+    @apply text-xl md:text-2xl font-medium text-muted-foreground;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.2) 0%, hsl(var(--primary) / 0.1) 100%);
+    border: 1px solid hsl(var(--primary) / 0.3);
+    color: hsl(var(--primary));
+  }
+
+  .data-table {
+    @apply w-full border-collapse overflow-hidden rounded-xl;
+    background: hsl(var(--card));
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-left text-xs font-bold uppercase tracking-wider;
+    background: hsl(var(--table-header));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .data-table td {
+    @apply px-4 py-3 text-sm border-t border-border;
+  }
+
+  .data-table tr:nth-child(even) td {
+    background: hsl(var(--table-row-alt));
+  }
+
+  .highlight-box {
+    @apply p-6 rounded-2xl relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--primary) / 0.05) 100%);
+    border: 1px solid hsl(var(--primary) / 0.3);
+  }
+
+  .stat-card {
+    @apply p-6 rounded-xl text-center;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .stat-value {
+    @apply text-3xl md:text-4xl font-bold;
+    color: hsl(var(--secondary));
+  }
+
+  .image-placeholder {
+    @apply flex items-center justify-center rounded-xl border-2 border-dashed;
+    border-color: hsl(var(--primary) / 0.5);
+    background: hsl(var(--primary) / 0.05);
+    min-height: 200px;
+  }
+
+  .bullet-point {
+    @apply flex items-start gap-3 text-base md:text-lg;
+  }
+
+  .bullet-point::before {
+    content: '';
+    @apply w-2 h-2 rounded-full mt-2 flex-shrink-0;
+    background: hsl(var(--primary));
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3), 0 0 80px hsl(var(--primary) / 0.15);
+  }
+
+  .nav-dot {
+    @apply w-3 h-3 rounded-full cursor-pointer transition-all duration-300;
+    background: hsl(var(--muted));
+  }
+
+  .nav-dot.active {
+    @apply w-8;
+    background: hsl(var(--primary));
+  }
+
+  .priority-badge {
+    @apply inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold;
+  }
+
+  .priority-5 {
+    background: hsl(var(--badge-success));
+    color: hsl(var(--foreground));
+  }
+
+  .priority-3 {
+    background: hsl(var(--badge-warning));
+    color: hsl(160 25% 6%);
   }
 }
